@@ -19,9 +19,13 @@ const props = defineProps({
       </figure>
     </div>
     <div class="card-body">
-      <div class="flex justify-around">
-        <span> {{ product.name }} </span>
-        <span>NT$ {{ product.price }}</span>
+      <div class="flex justify-around items-center join">
+        <span class="text-primary-100 text-[20px] w-1/2 border-r-2">
+          {{ product.name }}
+        </span>
+        <span class="text-primary-100 font-semibold"
+          >NT$ {{ product.price }}</span
+        >
       </div>
       <button class="bg-primary-200 py-3 text-primary-100 text-2xl font-bold">
         加入購物車

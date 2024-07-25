@@ -52,9 +52,12 @@ const products = ref([
           <span> {{ d.name }} </span>
           <span>NT$ {{ d.price }}</span>
         </div>
-        <button class="bg-primary-200 py-3 text-primary-100 text-2xl font-bold">
-          加入購物車
-        </button>
+        <Router-Link
+          class="bg-primary-200 py-3 text-center text-primary-100 text-2xl font-bold"
+          to="/cart"
+        >
+          <button class="">加入購物車</button>
+        </Router-Link>
       </div>
     </div>
   </div>

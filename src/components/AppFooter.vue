@@ -2,7 +2,7 @@
   <footer class="bg-primary-200 p-9">
     <div class="flex justify-around">
       <div class="flex flex-col">
-        <img src="/logotype-lg-dark.svg" class="w-60" alt="" />
+        <img src="/logotype-lg-dark.svg" class="w-60 max-sm:mb-[40px]" alt="" />
 
         <div class="flex-1"></div>
         <div>
@@ -14,11 +14,16 @@
         </div>
       </div>
       <div>
-        <img src="/sm-今天是個吃甜點的好日子.svg" width="110" alt="" />
+        <img
+          class="hidden lg:block"
+          src="/sm-今天是個吃甜點的好日子.svg"
+          width="110"
+          alt=""
+        />
       </div>
     </div>
-    <div class="flex gap-2 justify-around mt-8">
-      <div class="flex gap-2">
+    <div class="lg:flex gap-2 justify-around mt-8">
+      <div class="flex gap-2 max-sm:mb-5">
         <span>
           <img src="/ic-line@.svg" width="32" alt="" />
         </span>
