@@ -1,44 +1,80 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-6 col-lg-12">
-        <form @submit="handleSubmit">
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input
-              v-model="email"
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
+  <div class="container my-16">
+    <div class="flex">
+      <div class="w-1/2 bg-primary-100">
+        <div class="flex flex-col justify-center items-center">
+          <h1 class="font-bold text-white my-10">會員登入</h1>
+          <form
+            class="w-full flex flex-col justify-center"
+            @submit="handleSubmit"
+          >
+            <div
+              class="mb-3 rounded-none input flex items-center w-11/12 gap-3"
+            >
+              <User2Icon size="20" />
+
+              <input
+                v-model="email"
+                type="email"
+                id="exampleInputEmail1"
+                placeholder="電子信箱/手機號碼"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div
+              class="mb-3 rounded-none input flex items-center w-11/12 gap-3"
+            >
+              <KeyIcon size="20" />
+              <input
+                v-model="password"
+                type="password"
+                placeholder="請輸入使用者密碼"
+                id="exampleInputPassword1"
+              />
+            </div>
+            <div class="mb-3 flex items-center gap-3">
+              <input
+                v-model="checked"
+                class="checkbox checkbox-md checkbox-primary bg-white"
+                type="checkbox"
+                id="exampleCheck1"
+              />
+              <label for="exampleCheck1" class="font-bold text-white"
+                >記住我</label
+              >
+            </div>
+            <button
+              type="submit"
+              class="bg-primary-400 w-full py-3 font-bold text-2xl"
+            >
+              登入帳號
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="flex-1 bg-primary-200">
+        <div className="flex flex-col w-full  flex-1">
+          <div className="divider divider-neutral w-11/12 mx-auto ">
+            連結社群帳號
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">密碼</label>
-            <input
-              v-model="password"
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
-          </div>
-          <div class="mb-3 form-check">
-            <input
-              v-model="checked"
-              type="checkbox"
-              class="form-check-input"
-              id="exampleCheck1"
-            />
-            <label class="form-check-label" for="exampleCheck1">記住我</label>
-          </div>
-          <button type="submit" class="btn btn-primary">登入</button>
-        </form>
+
+          <button class="bg-primary-300 py-4 w-11/12 m-auto mt-2">
+            <img src="/ic-facebook-logotype.svg" class="w-60 m-auto" alt="" />
+          </button>
+          <button class="bg-primary-300 py-4 w-11/12 m-auto mt-2">
+            <img src="/ic-google.svg" alt="" class="w-60 m-auto" />
+          </button>
+          <button class="bg-primary-300 py-4 w-11/12 m-auto mt-2">
+            <img src="/ic-yahoo.svg" alt="" class="w-60 m-auto" />
+          </button>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
+import { User2Icon, KeyIcon } from "lucide-vue-next";
 import { ref } from "vue";
 import axios from "axios";
 import { URL, KEY } from "../config/index";
@@ -48,7 +84,7 @@ const email = ref("");
 const password = ref("");
 const checked = ref(false);
 
-const handleSubmit = (event: Event) => {
+const handleSubmit = (event) => {
   event.preventDefault();
   // console.log("Email:", email.value);
   // console.log("Password:", password.value);

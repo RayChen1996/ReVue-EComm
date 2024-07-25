@@ -3,16 +3,20 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://RayChen1996.github.io/ReVue-EComm/",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@vee-validate/rules": "^4.12.8",
     "@vue/compiler-sfc": "^3.4.27",
     "axios": "^1.7.2",
     "js-cookie": "^3.0.5",
+    "lucide": "^0.414.0",
+    "lucide-vue-next": "^0.414.0",
     "vee-validate": "^4.12.8",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
@@ -20,10 +24,16 @@
   "devDependencies": {
     "@popperjs/core": "^2.11.8",
     "@types/vue": "^2.0.0",
-    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue": "^5.1.0",
+    "@vitejs/plugin-vue-jsx": "^4.0.0",
+    "autoprefixer": "^10.4.19",
     "bootstrap": "^5.3.3",
+    "daisyui": "^4.12.10",
+    "gh-pages": "^6.1.1",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.6",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
-    "vue-tsc": "^2.0.6"
+    "vue-tsc": "^2.0.29"
   }
 }

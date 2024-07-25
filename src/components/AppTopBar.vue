@@ -1,30 +1,40 @@
+<script setup>
+import { ShoppingBasket, ShoppingCartIcon, Menu } from "lucide-vue-next";
+</script>
+
 <template>
-  <div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+  <header class="flex justify-between px-3 items-center">
+    <Menu class="w-5 lg:hidden" />
+    <div class="">
+      <a href="/">
+        <img
+          src="/logo-all-dark.svg"
+          class="w-60 mt-9 hidden lg:block my-10"
+          alt=""
+        />
+      </a>
+
+      <img src="/logotype-lg-dark.svg" class="w-60 lg:hidden" alt="" />
+    </div>
+    <div class="flex items-center gap-4">
+      <nav class="gap-[60px] mr-[79px] hidden lg:flex">
+        <RouterLink to="/" class="no-underline text-primary-100 font-bold"
+          >首頁</RouterLink
         >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">
-              <RouterLink to="/">Home</RouterLink>
-            </a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Pricing</a>
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
+        <RouterLink
+          to="/products"
+          class="no-underline text-primary-100 font-bold"
+          >甜點</RouterLink
+        >
+        <RouterLink
+          to="/sing-in"
+          class="no-underline text-primary-100 font-bold"
+          >登入</RouterLink
+        >
+      </nav>
+      <RouterLink to="/cart">
+        <ShoppingCartIcon class="text-primary-100" :size="32" />
+      </RouterLink>
+    </div>
+  </header>
 </template>

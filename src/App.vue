@@ -1,20 +1,16 @@
-<script setup lang="ts">
+<script setup>
 import AppTop from "./components/AppTopBar.vue";
+import AppFooter from "./components/AppFooter.vue";
+import Subscript from "./views/components/Home/subscript.vue";
 </script>
 
 <template>
   <div>
     <AppTop />
-    <nav class="flex">
-      <RouterLink to="/">Go to Home</RouterLink>
-      <RouterLink to="/about">Go to About</RouterLink>
-      <RouterLink to="/sing-in"> 登入 </RouterLink>
-    </nav>
-    <main>
+    <main class="h-full">
       <RouterView />
     </main>
-    <footer></footer>
+    <Subscript />
+    <AppFooter></AppFooter>
   </div>
 </template>
-
-<style scoped></style>
