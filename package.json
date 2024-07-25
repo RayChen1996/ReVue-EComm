@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://RayChen1996.github.io/ReVue-EComm/",
+  "homepage": "https://codingspace.raychen1996.us.kg/ReVue-EComm/",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
