@@ -4,9 +4,9 @@ import { ShoppingBasket, ShoppingCartIcon, Menu } from "lucide-vue-next";
 
 <template>
   <header class="flex justify-between px-3 items-center">
-    <Menu class="w-5 lg:hidden" />
+    <Menu class="w-5 lg:hidden my-10" />
     <div class="">
-      <a href="/">
+      <a href="/ReVue-EComm/">
         <img
           src="/logo-all-dark.svg"
           class="w-60 mt-9 hidden lg:block my-10"

@@ -6,10 +6,10 @@ export default {
       colors: {
         "primary-100": "#3F5D45",
         "primary-200": "#EAF0ED",
-
         "primary-300": "#FFFFFF",
         "primary-400": "#FFE180",
         "primary-500": "#1F0F39",
+        "primary-600": "#8DA291",
       },
     },
   },
@@ -25,7 +25,7 @@ export default {
           "base-100": "#FFFFFF",
           info: "#E9E2F3",
           success: "#380C7E",
-          warning: "#28085",
+          // warning: "#28085",
           error: "#000000",
         },
       },

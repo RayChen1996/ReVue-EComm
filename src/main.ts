@@ -4,7 +4,7 @@ import App from "./App.vue";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 import { createMemoryHistory, createRouter } from "vue-router";
-
+import { VueQueryPlugin } from "@tanstack/vue-query";
 import HomeView from "./views/Home.vue";
 import AboutView from "./views/About.vue";
 import SinginView from "./views/singin.vue";
@@ -26,4 +26,4 @@ const router = createRouter({
   routes,
 });
 
-createApp(App).use(router).mount("#app");
+createApp(App).use(router).use(VueQueryPlugin).mount("#app");

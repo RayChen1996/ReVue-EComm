@@ -1,7 +1,7 @@
 <template>
   <div class="container my-16">
-    <div class="flex">
-      <div class="w-1/2 bg-primary-100">
+    <div class="lg:flex">
+      <div class="lg:w-1/2 bg-primary-100">
         <div class="flex flex-col justify-center items-center">
           <h1 class="font-bold text-white my-10">會員登入</h1>
           <form

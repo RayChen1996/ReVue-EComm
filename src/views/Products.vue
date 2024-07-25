@@ -43,12 +43,12 @@ const products = ref([
       />
     </div>
     <section class="flex">
-      <nav class="flex w-1/6 flex-col">
-        <a href="">甜點類別</a>
-        <a href="">所有甜點（48）</a>
-        <a href="">本日精選（10）</a>
-        <a href="">人氣推薦（26）</a>
-        <a href="">新品上市（12）</a>
+      <nav class="flex w-1/6 flex-col text-2xl gap-3">
+        <button class="bg-primary-100 text-white py-3">甜點類別</button>
+        <button class="bg-primary-200 py-3">所有甜點（48）</button>
+        <button>本日精選（10）</button>
+        <button>人氣推薦（26）</button>
+        <button>新品上市（12）</button>
       </nav>
 
       <div class="flex-1 grid grid-cols-1 gap-4 md:grid-cols-3 mx-auto">
