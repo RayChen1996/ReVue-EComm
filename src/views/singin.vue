@@ -9,7 +9,7 @@
             @submit="handleSubmit"
           >
             <div
-              class="mb-3 rounded-none input flex items-center w-11/12 gap-3"
+              class="mb-3 rounded-none input flex items-center w-11/12 mx-auto gap-3"
             >
               <User2Icon size="20" />
 
@@ -19,20 +19,22 @@
                 id="exampleInputEmail1"
                 placeholder="電子信箱/手機號碼"
                 aria-describedby="emailHelp"
+                class="w-full"
               />
             </div>
             <div
-              class="mb-3 rounded-none input flex items-center w-11/12 gap-3"
+              class="mb-3 rounded-none input flex items-center w-11/12 mx-auto gap-3"
             >
               <KeyIcon size="20" />
               <input
                 v-model="password"
                 type="password"
                 placeholder="請輸入使用者密碼"
+                class="w-full"
                 id="exampleInputPassword1"
               />
             </div>
-            <div class="mb-3 flex items-center gap-3">
+            <div class="mb-3 flex items-center gap-3 w-11/12 mx-auto">
               <input
                 v-model="checked"
                 class="checkbox checkbox-md checkbox-primary bg-white"
@@ -48,6 +50,8 @@
               class="bg-primary-400 w-full py-3 font-bold text-2xl"
             >
               登入帳號
+
+              <span v-if="loading" class="loading"></span>
             </button>
           </form>
         </div>
@@ -83,7 +87,7 @@ import Cookies from "js-cookie";
 const email = ref("");
 const password = ref("");
 const checked = ref(false);
-
+const loading = ref(false);
 const handleSubmit = (event) => {
   event.preventDefault();
   // console.log("Email:", email.value);
@@ -93,6 +97,8 @@ const handleSubmit = (event) => {
   // console.log(import.meta.env.VITE_BASEURL);
   // console.log(import.meta.env.VITE_KET);
 
+  loading.value = true;
+
   axios
     .post(`${URL}v2/admin/signin`, {
       username: email.value,
@@ -101,6 +107,7 @@ const handleSubmit = (event) => {
     .then((res) => {
       console.log(res);
 
+      loading.value = false;
       if (res.data.token) {
         Cookies.set("token", res.data.token, { expires: 7 });
         console.log("Token stored in cookies");
